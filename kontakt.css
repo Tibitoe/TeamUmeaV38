@@ -36,17 +36,20 @@ header section a{
     text-decoration: none;
 }
 /*slut på header kod*/
+
  /*kod för main*/ 
 main section{
     display:grid;
     padding: 20px;
     background-color: #e3f6f5 ;
-    margin:10px;
+    margin: 10px auto;
     border-radius: 8px;
+    max-width: 1022px;
 }
 /*gallery text*/ 
 h3,h4,p{
-    text-align: center;
+    text-align: left;
+    line-height: 1.5rem;
 }
   /*main*/
 main section img{
@@ -59,7 +62,7 @@ main section img{
 @media (min-width:820px) {
     main section{
         grid-template-columns: repeat(2,1fr);
-        gap:20px;
+        gap: 20px;
     }
     main section img{
         height:400px;
@@ -73,7 +76,7 @@ main section img{
         gap:20px;
     }
     main section img{
-        height:400px;
-        width:400px;
+        height: 100%;
+        width:480px;
     }
 }
