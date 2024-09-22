@@ -95,7 +95,7 @@ header section h1{
 header section a{
   text-decoration: none;
 }
-
+/*NAV BAR*/
 nav {
   background-color: var(--fourth-color);
   padding: 10px;
@@ -113,21 +113,54 @@ nav ul li a {
   border-radius: 8px;
   padding: 0.5rem;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: var(--first-color);
   transition: all 0.2s ease-in-out;
 }
 
 nav ul li a:hover {
   color: var(--first-color);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 } 
 .active {
-  pointer-events: none; /*Tar bort hovereffekt från den aktiva sidan (Annars blir textfärgen samma som bakgrunden) //Tobias*/
+  pointer-events: none; /*Tar bort hovereffekt från den aktiva sidan (Annars blir textfärgen samma som bakgrunden)*/
   background-color: var(--first-color);
-  font-size: 1.1em;
+  font-size: 1.4rem;
   color: var(--second-color);
 }
+
+/*MEDIA QUERIES FÖR NAV*/
+@media (max-width: 480px) {
+  nav {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+  nav ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  nav ul li {
+    padding: 0.5rem;
+    background-color: var(--fourth-color);
+    justify-items: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  nav ul li a {
+    font-size: 1.7rem;
+  }
+  .active {
+    font-size: 1.7rem;
+  }
+  main {
+    padding-top: 12rem;
+  }
+
+}
+
 /* Oscars, Robins och Tobias flex-container av djurbilder + aside*/
 
 .animals-imagesAndAside-flexContainer{
@@ -152,16 +185,18 @@ nav ul li a:hover {
   max-width: 350px;
   background-color: var(--third-color);
   border-radius: 8px;
+  box-shadow: black 10px 10px 20px;
 }
 
 .animals-images-gridContainer figure figcaption{
   padding: 10px;
+  line-height: 2rem;
 }
 
 .animals-images-gridContainer figure img{
   width: 100%;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .animals-images-gridContainer figure figcaption p{
@@ -179,6 +214,7 @@ aside {
   align-items: center;
   height: 200px;
   border-radius: 8px;
+  box-shadow: black 10px 10px 20px;
 }
 
 aside ul {
